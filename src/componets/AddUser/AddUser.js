@@ -1,3 +1,4 @@
+import Button from "../UI/Button";
 import Card from "../UI/Card";
 import classes from './AddUser.module.css'
 
@@ -9,7 +10,7 @@ const AddUser = () => {
                 <input type="text" className={classes.input}></input>
                 <label htmlFor="Name" className={classes.label} >Age</label>
                 <input type="number " className={classes.input}></input>
-                <button>Send me</button>
+                <Button>send me</Button>
 
             </form>
         </Card>
