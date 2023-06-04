@@ -1,0 +1,9 @@
+.use {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px reba(0, 0, 0, 0.26);
+    width: 40%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 20px;
+}
