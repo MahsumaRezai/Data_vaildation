@@ -10,6 +10,12 @@ const AddUser = () => {
 
     const AddUserHandler = (event) => {
         event.preventDefault();
+        if (entreName.trim().length <= 3 || entreLastName.trim().length <= 3 || entrePassword.trim().length === 0) {
+            return;
+        }
+        setentrename('');
+        setenterLastName('');
+        setentrPassword('');
         console.log(entreName, entreLastName, entrePassword)
     }
     const nameEnterHandler = (event) => {
@@ -27,11 +33,13 @@ const AddUser = () => {
         <Card >
             <form className={classes.form} onSubmit={AddUserHandler}>
                 <label htmlFor="Name" className={classes.label} >Frist name</label>
-                <input type="text" className={classes.input} onChange={nameEnterHandler}></input>
+                <input type="text" className={classes.input} onChange={nameEnterHandler} value={entreName} />
+
                 <label htmlFor="Name" className={classes.label} >Last name</label>
-                <input type="text " className={classes.input} onChange={lastEnterHandler}></input>
+                <input type="text " className={classes.input} onChange={lastEnterHandler} value={entreLastName} />
+
                 <label htmlFor="Name" className={classes.label} >Password</label>
-                <input type="password " className={classes.input} onChange={passwordEnterHandler}></input>
+                <input type="password " className={classes.input} onChange={passwordEnterHandler} value={entrePassword} />
                 <Button type="submit">send me</Button>
 
 
