@@ -10,9 +10,10 @@
     font: inherit;
     display: block;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid gainsboro;
     padding: 0.15rem;
     margin-bottom: 0.5rem;
+    padding-left: 10px;
 
 
 }
