@@ -6,7 +6,7 @@ const UserList = (porps) => {
         <Card className={classes.use}>
             <ul className={classes.cart}>
                 {porps.users.map((user) => (
-                    <li className={classes.list} >
+                    <li className={classes.list} key={user.id} >
                         {user.name} {user.lastname} {user.password}
                     </li>
                 ))}

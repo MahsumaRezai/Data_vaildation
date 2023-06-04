@@ -7,7 +7,7 @@ const App = () => {
   const [enterUserList, setEnterUserList] = useState([]);
   const addUersHandler = (name, lastname, password) => {
     setEnterUserList((pastData) => {
-      return [...pastData, { name: name, lastname: lastname, password: password }]
+      return [...pastData, { name: name, lastname: lastname, password: password, id: Math.random().toString() }]
 
     });
   }
