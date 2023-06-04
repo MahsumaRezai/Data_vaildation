@@ -1,0 +1,16 @@
+.head {
+    font: inherit;
+    width: 100%;
+    background: maroon;
+    height: 50px;
+    box-shadow: 5px 5px 5px 5px gainsboro;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
