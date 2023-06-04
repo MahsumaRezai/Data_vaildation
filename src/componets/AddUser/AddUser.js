@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 import Card from "../UI/Card";
 import classes from './AddUser.module.css'
 
-const AddUser = () => {
+const AddUser = (porps) => {
     const [entreName, setentrename] = useState('');
     const [entreLastName, setenterLastName] = useState('');
     const [entrePassword, setentrPassword] = useState('');
@@ -16,7 +16,7 @@ const AddUser = () => {
         setentrename('');
         setenterLastName('');
         setentrPassword('');
-        console.log(entreName, entreLastName, entrePassword)
+        porps.onAddUser(entreName, entreLastName, entrePassword)
     }
     const nameEnterHandler = (event) => {
         setentrename(event.target.value)
@@ -35,11 +35,11 @@ const AddUser = () => {
                 <label htmlFor="Name" className={classes.label} >Frist name</label>
                 <input type="text" className={classes.input} onChange={nameEnterHandler} value={entreName} />
 
-                <label htmlFor="Name" className={classes.label} >Last name</label>
+                <label htmlFor="Last name" className={classes.label} >Last name</label>
                 <input type="text " className={classes.input} onChange={lastEnterHandler} value={entreLastName} />
 
                 <label htmlFor="Name" className={classes.label} >Password</label>
-                <input type="password " className={classes.input} onChange={passwordEnterHandler} value={entrePassword} />
+                <input type="password" className={classes.input} onChange={passwordEnterHandler} value={entrePassword} />
                 <Button type="submit">send me</Button>
 
 

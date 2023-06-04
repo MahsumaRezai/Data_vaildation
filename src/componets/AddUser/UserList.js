@@ -4,15 +4,14 @@ import classes from './UserList.module.css';
 const UserList = (porps) => {
     return (
         <Card className={classes.use}>
-            <ul>
+            <ul className={classes.cart}>
                 {porps.users.map((user) => (
-                    <li >
-                        {user.name} {user.password}({user.lastname} )
+                    <li className={classes.list} >
+                        {user.name} {user.lastname} {user.password}
                     </li>
                 ))}
             </ul>
         </Card>
     )
-
 }
 export default UserList;

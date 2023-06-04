@@ -1,13 +1,23 @@
+import { useState } from "react";
 import AddUser from "./componets/AddUser/AddUser";
 import UserList from "./componets/AddUser/UserList";
 import Header from "./componets/UI/Header";
 
 const App = () => {
+  const [enterUserList, setEnterUserList] = useState([]);
+  const addUersHandler = (name, lastname, password) => {
+    setEnterUserList((pastData) => {
+      return [...pastData, { name: name, lastname: lastname, password: password }]
+
+    });
+  }
+
+
   return (
     <div>
       <Header />
-      <AddUser />
-      <UserList users={[]} />
+      <AddUser onAddUser={addUersHandler} />
+      <UserList users={enterUserList} />
     </div>
   )
 
