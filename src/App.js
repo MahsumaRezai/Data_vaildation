@@ -2,6 +2,7 @@ import { useState } from "react";
 import AddUser from "./componets/AddUser/AddUser";
 import UserList from "./componets/AddUser/UserList";
 import Header from "./componets/UI/Header";
+import Footer from './componets/UI/Footer'
 
 const App = () => {
   const [enterUserList, setEnterUserList] = useState([]);
@@ -16,8 +17,15 @@ const App = () => {
   return (
     <div>
       <Header />
-      <AddUser onAddUser={addUersHandler} />
-      <UserList users={enterUserList} />
+      <main>
+        <AddUser onAddUser={addUersHandler} />
+        <UserList users={enterUserList} />
+      </main>
+
+      <footer>
+        <Footer />
+
+      </footer>
     </div>
   )
 

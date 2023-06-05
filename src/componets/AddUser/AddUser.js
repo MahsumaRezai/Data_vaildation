@@ -10,14 +10,24 @@ const AddUser = (porps) => {
 
     const AddUserHandler = (event) => {
         event.preventDefault();
-        if (entreName.trim().length <= 3 || entreLastName.trim().length <= 3 || entrePassword.trim().length === 0) {
-            return;
+        if (entreName.trim().length <= 3) {
+            return alert("Your name is not correct ")
+        }
+        else if (entreLastName.trim().length <= 3) {
+            return alert(" Your Last name is not correct")
+
+        }
+        else if (entrePassword.trim().length === 0) {
+            return ("Your Password is not correct ")
+
         }
         setentrename('');
         setenterLastName('');
         setentrPassword('');
         porps.onAddUser(entreName, entreLastName, entrePassword)
     }
+
+
     const nameEnterHandler = (event) => {
         setentrename(event.target.value)
     }
@@ -33,7 +43,7 @@ const AddUser = (porps) => {
         <Card >
             <form className={classes.form} onSubmit={AddUserHandler}>
                 <label htmlFor="Name" className={classes.label} >Frist name</label>
-                <input type="text" className={classes.input} onChange={nameEnterHandler} value={entreName} />
+                <input type="text" className={classes.input} onChange={nameEnterHandler} value={entreName} id="input" />
 
                 <label htmlFor="Last name" className={classes.label} >Last name</label>
                 <input type="text " className={classes.input} onChange={lastEnterHandler} value={entreLastName} />
